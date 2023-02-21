@@ -1,0 +1,44 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.board{
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cell{
+    border-bottom: 10px solid aqua;
+    border-right: 10px solid aqua;
+    font-size: 100px;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 195px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell:nth-child(3n){
+    border-right: none;
+}
+.cell:nth-child(n+7){
+    border-bottom: none;
+}
+
+.cell.highlight{
+    background-color: rgb(82, 74, 74);
+}
